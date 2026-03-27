@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mill-Turn Pros — Expert CNC solutions for programming, process optimization, machine setup, and training." />
+  <title>Mill-Turn Pros | CNC Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo-mark.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#hero" class="navbar__logo">
+        <svg class="logo-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="28" cy="28" r="23" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.07)"/>
+          <circle cx="28" cy="28" r="17" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.25"/>
+          <line x1="28"   y1="5"    x2="28"   y2="8"    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+          <line x1="39.5" y1="48"   x2="38"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+          <line x1="16.5" y1="48"   x2="18"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+          <path d="M 29 16.23 L 38.69 33.02 Q 39.69 34.75 37.69 34.75 L 18.31 34.75 Q 16.31 34.75 17.31 33.02 L 27 16.23 Q 28 14.5 29 16.23 Z" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.14)"/>
+          <circle cx="28" cy="28" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+        Mill-<span class="accent">Turn</span> Pros
+      </a>
+      <nav class="navbar__nav" id="navMenu" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn--sm">Get a Quote</a>
+      </nav>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Precision. Efficiency. Expertise.</p>
+      <h1 class="hero__headline">
+        CNC Solutions That<br />
+        <span class="accent">Drives Results</span>
+      </h1>
+      <p class="hero__sub">
+        From complex mill-turn programming to full process optimization —
+        we help shops run faster, smarter, and with fewer headaches.
+      </p>
+      <div class="hero__cta-group">
+        <a href="#contact" class="btn btn--primary">Get a Quote</a>
+        <a href="#services" class="btn btn--ghost">See Our Services</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">End-to-end CNC consulting tailored to your shop's needs.</p>
+      </div>
+      <div class="services__grid">
+
+        <div class="card fade-in">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M14 20h8M14 26h12M14 32h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="34" cy="26" r="5" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M37.5 29.5L40 32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card__title">CNC Programming</h3>
+          <p class="card__body">
+            Expert mill, turn, and mill-turn part programming using industry-leading CAM software.
+            Complex multi-axis work done right the first time.
+          </p>
+          <ul class="card__list">
+            <li>Multi-axis milling &amp; turning</li>
+            <li>Mastercam, Fusion 360 &amp; more</li>
+            <li>Post-processor development</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M8 36L18 24l8 6 8-12 6 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="38" cy="12" r="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M8 8v32h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Process Optimization</h3>
+          <p class="card__body">
+            Identify bottlenecks, slash cycle times, and maximize spindle uptime.
+            Data-driven strategies that directly improve your bottom line.
+          </p>
+          <ul class="card__list">
+            <li>Cycle time reduction</li>
+            <li>Feeds, speeds &amp; toolpath strategy</li>
+            <li>Tooling &amp; fixture review</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="10" y="14" width="28" height="22" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M16 14V11a2 2 0 012-2h12a2 2 0 012 2v3" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="24" cy="25" r="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M20 36v2M28 36v2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M14 25h6M28 25h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Machine Setup &amp; Prove-Out</h3>
+          <p class="card__body">
+            On-site or remote support for machine setup, tooling, work-holding, and
+            first-article prove-out. Get to good parts faster.
+          </p>
+          <ul class="card__list">
+            <li>On-site &amp; remote support</li>
+            <li>First-article prove-out</li>
+            <li>Work-holding &amp; tooling advice</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="18" cy="16" r="6" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="32" cy="16" r="6" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M6 40c0-6.627 5.373-12 12-12h12c6.627 0 12 5.373 12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M24 28v8M20 32l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Training &amp; Mentoring</h3>
+          <p class="card__body">
+            Build your team's skills from the ground up. Hands-on training for
+            operators and programmers at every experience level.
+          </p>
+          <ul class="card__list">
+            <li>Operator &amp; programmer training</li>
+            <li>CAM software onboarding</li>
+            <li>Customized curriculum</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="6" y="8" width="28" height="22" rx="2" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M10 15h20M10 20h14M10 25h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="36" cy="36" r="8" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M33 36l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card__title">CAD/CAM Consulting</h3>
+          <p class="card__body">
+            Get the most out of your software investment. We help shops select,
+            configure, and fully leverage their CAD/CAM stack for maximum efficiency.
+          </p>
+          <ul class="card__list">
+            <li>Software evaluation &amp; selection</li>
+            <li>Workflow &amp; template setup</li>
+            <li>Custom post-processor builds</li>
+          </ul>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M24 6L8 14v14c0 9 7.2 14.8 16 16 8.8-1.2 16-7 16-16V14L24 6z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+              <path d="M17 24l5 5 9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Quality &amp; Inspection</h3>
+          <p class="card__body">
+            Catch issues before they reach the customer. From GD&amp;T reviews to CMM
+            programming, we build quality into your process from the start.
+          </p>
+          <ul class="card__list">
+            <li>GD&amp;T drawing review</li>
+            <li>CMM program development</li>
+            <li>Inspection plan creation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+      <div class="about__photo-wrap fade-in">
+        <!-- TODO: Replace with your actual photo -->
+        <div class="about__photo-placeholder" aria-label="Profile photo placeholder">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="60" cy="45" r="22" stroke="currentColor" stroke-width="3"/>
+            <path d="M14 106c0-25.405 20.595-46 46-46s46 20.595 46 46" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="about__badge">
+          <span class="accent">20+</span>
+          <span>Years Experience</span>
+        </div>
+      </div>
+      <div class="about__text fade-in">
+        <p class="section-label">About</p>
+        <h2 class="section-title">Built by Machinists,<br/>For Machinists</h2>
+        <!-- TODO: Replace with your actual bio -->
+        <p>
+          With over two decades of hands-on experience in precision machining and CNC programming,
+          Mill-Turn Pros was founded on a simple idea: shops deserve consulting that speaks their language.
+        </p>
+        <p>
+          We've stood at the machine, run the program, and chased the tolerance. That experience means
+          we don't just offer advice — we deliver practical solutions that work in the real world,
+          on real parts, with real deadlines.
+        </p>
+        <div class="about__stats">
+          <div class="stat">
+            <!-- TODO: Update stat numbers -->
+            <span class="stat__num accent">500<span class="stat__plus">+</span></span>
+            <span class="stat__label">Programs Written</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num accent">50<span class="stat__plus">+</span></span>
+            <span class="stat__label">Shops Served</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num accent">99<span class="stat__plus">%</span></span>
+            <span class="stat__label">On-Time Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GAME ===== -->
+  <section class="game-section section" id="game">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Test Your Knowledge</p>
+        <h2 class="section-title">G-Code Challenge</h2>
+        <p class="section-sub">Think you know your G-codes? Five quick questions to find out.</p>
+      </div>
+      <div class="game">
+        <div class="game__card" id="gameCard">
+          <div class="game__progress">
+            <span id="gameProgressText">Question 1 of 5</span>
+            <div class="game__progress-bar">
+              <div class="game__progress-fill" id="gameProgressFill"></div>
+            </div>
+          </div>
+          <div class="game__timer-bar">
+            <div class="game__timer-fill" id="gameTimerFill"></div>
+          </div>
+          <div class="game__question">
+            <p class="game__code" id="gameCode"></p>
+            <p class="game__prompt">What does this code do?</p>
+          </div>
+          <div class="game__choices" id="gameChoices"></div>
+          <div class="game__explain" id="gameExplain" style="display:none">
+            <p id="gameExplainText"></p>
+            <button class="btn btn--sm btn--ghost" id="gameNext">Next &rarr;</button>
+          </div>
+        </div>
+        <div class="game__result" id="gameResult" style="display:none">
+          <div class="game__score-display">
+            <span class="game__score-num accent" id="gameScore">0</span>
+            <span class="game__score-denom">&thinsp;/ 5</span>
+          </div>
+          <p class="game__score-msg" id="gameScoreMsg"></p>
+          <div class="game__breakdown" id="gameBreakdown"></div>
+          <button class="btn btn--primary" id="gameRestart">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="contact__bg-glow" aria-hidden="true"></div>
+    <div class="container contact__inner">
+      <div class="contact__info fade-in">
+        <p class="section-label">Let's Talk</p>
+        <h2 class="section-title">Ready to Optimize<br/>Your Operation?</h2>
+        <p class="section-sub">
+          Tell us about your project. We'll get back to you within one business day.
+        </p>
+        <ul class="contact__details">
+          <li>
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8l9 6 9-6M4 6h16a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <!-- TODO: Replace with your email -->
+            <a href="mailto:info@millturnpros.com">info@millturnpros.com</a>
+          </li>
+          <li>
+            <span class="contact__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <!-- TODO: Replace with your phone number -->
+            <a href="tel:+15550000000">(555) 000-0000</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form fade-in" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company (optional)" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service…</option>
+            <option>CNC Programming</option>
+            <option>Process Optimization</option>
+            <option>Machine Setup &amp; Prove-Out</option>
+            <option>Training &amp; Mentoring</option>
+            <option>CAD/CAM Consulting</option>
+            <option>Quality &amp; Inspection</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Describe your project or question…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        <p class="form__note">We typically respond within 1 business day.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="footer__logo">
+        <svg class="logo-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="28" cy="28" r="23" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.07)"/>
+          <circle cx="28" cy="28" r="17" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.25"/>
+          <line x1="28"   y1="5"    x2="28"   y2="8"    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+          <line x1="39.5" y1="48"   x2="38"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+          <line x1="16.5" y1="48"   x2="18"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
+          <path d="M 29 16.23 L 38.69 33.02 Q 39.69 34.75 37.69 34.75 L 18.31 34.75 Q 16.31 34.75 17.31 33.02 L 27 16.23 Q 28 14.5 29 16.23 Z" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.14)"/>
+          <circle cx="28" cy="28" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+        Mill-<span class="accent">Turn</span> Pros
+      </a>
+      <p class="footer__copy">&copy; <span id="year"></span> Mill-Turn Pros. All rights reserved.</p>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

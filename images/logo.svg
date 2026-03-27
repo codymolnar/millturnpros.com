@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" fill="none" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Mill-Turn Pros — CNC Solutions</title>
+
+  <!--
+    Mill-Turn Pros Logo
+    Icon: Precision cutting insert mark (outer ring + equilateral triangle insert + center bore)
+    Colors: Electric blue #38bdf8 on transparent (designed for dark backgrounds)
+  -->
+
+  <!-- ═══ ICON MARK (56 × 56 canvas, center 28,28) ═══ -->
+
+  <!-- Outer precision ring -->
+  <circle cx="28" cy="28" r="23" stroke="#38bdf8" stroke-width="1.5" fill="rgba(56,189,248,0.05)"/>
+
+  <!-- Subtle inner ring at circumscribed-circle level -->
+  <circle cx="28" cy="28" r="17" stroke="#38bdf8" stroke-width="0.6" fill="none" opacity="0.2"/>
+
+  <!--
+    Tick marks at each triangle vertex direction on the outer ring.
+    Triangle apex is UP. Vertex unit vectors:
+      Top:  (0, -1)          → outer (28, 5)    inner (28, 8)
+      BR:   (0.5,  0.866)    → outer (39.5, 48) inner (38, 45.5)
+      BL:   (-0.5, 0.866)    → outer (16.5, 48) inner (18, 45.5)
+  -->
+  <line x1="28"   y1="5"    x2="28"   y2="8"    stroke="#38bdf8" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+  <line x1="39.5" y1="48"   x2="38"   y2="45.5" stroke="#38bdf8" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+  <line x1="16.5" y1="48"   x2="18"   y2="45.5" stroke="#38bdf8" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+
+  <!--
+    Cutting insert — equilateral triangle, circumradius R=13.5, center (28,28)
+    Vertices:
+      Top: (28, 14.5)
+      BR:  (39.69, 34.75)
+      BL:  (16.31, 34.75)
+    Rounded corners r=2 using quadratic bezier curves:
+  -->
+  <path d="
+    M 29 16.23
+    L 38.69 33.02
+    Q 39.69 34.75 37.69 34.75
+    L 18.31 34.75
+    Q 16.31 34.75 17.31 33.02
+    L 27 16.23
+    Q 28 14.5 29 16.23
+    Z"
+    stroke="#38bdf8" stroke-width="1.5" stroke-linejoin="round"
+    fill="rgba(56,189,248,0.12)"/>
+
+  <!-- Insert center bore hole -->
+  <circle cx="28" cy="28" r="3" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+
+  <!-- ═══ WORDMARK (starts at x=62) ═══ -->
+
+  <!--
+    Font: Space Grotesk (falls back to geometric sans-serif stack)
+    When embedded in the website, Space Grotesk loads via Google Fonts.
+  -->
+  <text
+    x="62" y="32"
+    font-family="'Space Grotesk', 'Gill Sans', 'Trebuchet MS', 'Segoe UI', system-ui, sans-serif"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="-0.4"
+    fill="#f1f5f9">Mill-Turn <tspan fill="#38bdf8">Pros</tspan></text>
+
+  <!-- Tagline -->
+  <text
+    x="63" y="46"
+    font-family="'Inter', 'Segoe UI', system-ui, sans-serif"
+    font-size="7.5"
+    font-weight="500"
+    letter-spacing="0.17em"
+    fill="#64748b">CNC SOLUTIONS</text>
+
+</svg>
