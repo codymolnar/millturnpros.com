@@ -146,21 +146,20 @@ ul { list-style: none; }
 }
 
 .navbar__logo {
-  font-family: var(--font-head);
-  font-size: 1.25rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--text);
   transition: opacity var(--transition);
 }
 .navbar__logo:hover { opacity: 0.85; }
-.logo-icon {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  color: var(--accent);
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.logo-img--footer {
+  height: 38px;
 }
 
 .navbar__nav {
@@ -528,8 +527,9 @@ ul { list-style: none; }
 .about__badge span:first-child { font-size: 1.6rem; font-family: var(--font-head); }
 .about__badge span:last-child  { font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
 
-.about__text .section-title { text-align: left; margin-bottom: 1.5rem; }
-.about__text .section-label { text-align: left; }
+.about__text { max-width: 720px; margin: 0 auto; }
+.about__text .section-title { text-align: center; margin-bottom: 1.5rem; }
+.about__text .section-label { text-align: center; }
 
 .about__text p {
   color: var(--text-muted);
@@ -540,6 +540,7 @@ ul { list-style: none; }
 
 .about__stats {
   display: flex;
+  justify-content: center;
   gap: 2.5rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
@@ -738,13 +739,9 @@ ul { list-style: none; }
 }
 
 .footer__logo {
-  font-family: var(--font-head);
-  font-size: 1rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  opacity: 0.8;
+  opacity: 0.85;
   transition: opacity var(--transition);
 }
 .footer__logo:hover { opacity: 1; }
@@ -808,6 +805,23 @@ ul { list-style: none; }
 .game {
   max-width: 560px;
   margin: 0 auto;
+}
+
+.game__start {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.game__start p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
 
 .game__card {

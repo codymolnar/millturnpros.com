@@ -58,7 +58,9 @@ fadeEls.forEach(el => observer.observe(el));
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// --- Contact form (mailto fallback) ---
+// --- Contact form (Google Apps Script) ---
+const FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxVonHxFeh13pai0qMJ6zzGrQG7kqIhJ4u5DuC2_L7NbSHej1cZ0IhOKcoerDobHxN73g/exec';
+
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -70,40 +72,35 @@ if (contactForm) {
     const service = contactForm.service.value;
     const message = contactForm.message.value.trim();
 
-    // Basic validation
     if (!name || !email || !message) {
       shakeForm(contactForm);
       return;
     }
 
-    // TODO: Replace with your actual email address
-    const toEmail = 'info@millturnpros.com';
-
-    const subject = encodeURIComponent(
-      `Quote Request${service ? ' — ' + service : ''} from ${name}`
-    );
-
-    const body = encodeURIComponent(
-      `Name: ${name}\n` +
-      (company ? `Company: ${company}\n` : '') +
-      `Email: ${email}\n` +
-      (service ? `Service: ${service}\n` : '') +
-      `\nMessage:\n${message}`
-    );
-
-    window.location.href = `mailto:${toEmail}?subject=${subject}&body=${body}`;
-
-    // Visual feedback
     const btn = contactForm.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = 'Opening Email Client…';
-    contactForm.classList.add('submitted');
+    btn.textContent  = 'Sending…';
+    btn.disabled     = true;
 
-    setTimeout(() => {
-      btn.textContent = originalText;
-      contactForm.classList.remove('submitted');
-      contactForm.reset();
-    }, 3500);
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      mode:   'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, company, email, service, message }),
+    })
+      .then(() => {
+        btn.textContent = 'Message Sent!';
+        contactForm.classList.add('submitted');
+        contactForm.reset();
+        setTimeout(() => {
+          btn.textContent = 'Send Message';
+          btn.disabled    = false;
+          contactForm.classList.remove('submitted');
+        }, 4000);
+      })
+      .catch(() => {
+        btn.textContent = 'Failed — please email info@millturnpros.com';
+        btn.disabled    = false;
+      });
   });
 }
 
@@ -283,6 +280,7 @@ function shakeForm(form) {
   let timerRaf = null;
   const TIMER_DUR = 15000;
 
+  const gameStart    = document.getElementById('gameStart');
   const progressText = document.getElementById('gameProgressText');
   const progressFill = document.getElementById('gameProgressFill');
   const timerFill    = document.getElementById('gameTimerFill');
@@ -297,10 +295,17 @@ function shakeForm(form) {
   function start() {
     qs = shuffle(POOL).slice(0, 5);
     idx = 0; score = 0; results = [];
-    gameCard.style.display   = '';
+    stopTimer();
+    gameCard.style.display   = 'none';
     gameResult.style.display = 'none';
-    show();
+    gameStart.style.display  = '';
   }
+
+  document.getElementById('gameBegin').addEventListener('click', () => {
+    gameStart.style.display = 'none';
+    gameCard.style.display  = '';
+    show();
+  });
 
   function show() {
     const q = qs[idx];

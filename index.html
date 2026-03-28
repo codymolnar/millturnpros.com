@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mill-Turn Pros — Expert CNC solutions for programming, process optimization, machine setup, and training." />
   <title>Mill-Turn Pros | CNC Solutions</title>
-  <link rel="icon" type="image/svg+xml" href="images/logo-mark.svg" />
+  <link rel="icon" type="image/png" href="images/MTP-Logo.png" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,16 +17,7 @@
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#hero" class="navbar__logo">
-        <svg class="logo-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="28" cy="28" r="23" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.07)"/>
-          <circle cx="28" cy="28" r="17" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.25"/>
-          <line x1="28"   y1="5"    x2="28"   y2="8"    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
-          <line x1="39.5" y1="48"   x2="38"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
-          <line x1="16.5" y1="48"   x2="18"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
-          <path d="M 29 16.23 L 38.69 33.02 Q 39.69 34.75 37.69 34.75 L 18.31 34.75 Q 16.31 34.75 17.31 33.02 L 27 16.23 Q 28 14.5 29 16.23 Z" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.14)"/>
-          <circle cx="28" cy="28" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        </svg>
-        Mill-<span class="accent">Turn</span> Pros
+        <img src="images/MTP-Logo.png" alt="Mill-Turn Pros" class="logo-img" />
       </a>
       <nav class="navbar__nav" id="navMenu" aria-label="Main navigation">
         <a href="#services">Services</a>
@@ -205,20 +196,7 @@
 
   <!-- ===== ABOUT ===== -->
   <section class="about section" id="about">
-    <div class="container about__inner">
-      <div class="about__photo-wrap fade-in">
-        <!-- TODO: Replace with your actual photo -->
-        <div class="about__photo-placeholder" aria-label="Profile photo placeholder">
-          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="60" cy="45" r="22" stroke="currentColor" stroke-width="3"/>
-            <path d="M14 106c0-25.405 20.595-46 46-46s46 20.595 46 46" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="about__badge">
-          <span class="accent">20+</span>
-          <span>Years Experience</span>
-        </div>
-      </div>
+    <div class="container">
       <div class="about__text fade-in">
         <p class="section-label">About</p>
         <h2 class="section-title">Built by Machinists,<br/>For Machinists</h2>
@@ -235,59 +213,17 @@
         <div class="about__stats">
           <div class="stat">
             <!-- TODO: Update stat numbers -->
-            <span class="stat__num accent">500<span class="stat__plus">+</span></span>
+            <span class="stat__num accent">1000<span class="stat__plus">+</span></span>
             <span class="stat__label">Programs Written</span>
           </div>
           <div class="stat">
-            <span class="stat__num accent">50<span class="stat__plus">+</span></span>
+            <span class="stat__num accent">60<span class="stat__plus">+</span></span>
             <span class="stat__label">Shops Served</span>
           </div>
           <div class="stat">
             <span class="stat__num accent">99<span class="stat__plus">%</span></span>
             <span class="stat__label">On-Time Delivery</span>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GAME ===== -->
-  <section class="game-section section" id="game">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Test Your Knowledge</p>
-        <h2 class="section-title">G-Code Challenge</h2>
-        <p class="section-sub">Think you know your G-codes? Five quick questions to find out.</p>
-      </div>
-      <div class="game">
-        <div class="game__card" id="gameCard">
-          <div class="game__progress">
-            <span id="gameProgressText">Question 1 of 5</span>
-            <div class="game__progress-bar">
-              <div class="game__progress-fill" id="gameProgressFill"></div>
-            </div>
-          </div>
-          <div class="game__timer-bar">
-            <div class="game__timer-fill" id="gameTimerFill"></div>
-          </div>
-          <div class="game__question">
-            <p class="game__code" id="gameCode"></p>
-            <p class="game__prompt">What does this code do?</p>
-          </div>
-          <div class="game__choices" id="gameChoices"></div>
-          <div class="game__explain" id="gameExplain" style="display:none">
-            <p id="gameExplainText"></p>
-            <button class="btn btn--sm btn--ghost" id="gameNext">Next &rarr;</button>
-          </div>
-        </div>
-        <div class="game__result" id="gameResult" style="display:none">
-          <div class="game__score-display">
-            <span class="game__score-num accent" id="gameScore">0</span>
-            <span class="game__score-denom">&thinsp;/ 5</span>
-          </div>
-          <p class="game__score-msg" id="gameScoreMsg"></p>
-          <div class="game__breakdown" id="gameBreakdown"></div>
-          <button class="btn btn--primary" id="gameRestart">Play Again</button>
         </div>
       </div>
     </div>
@@ -320,7 +256,7 @@
               </svg>
             </span>
             <!-- TODO: Replace with your phone number -->
-            <a href="tel:+15550000000">(555) 000-0000</a>
+            <a href="tel:+16154694626">(615) 469-4626</a>
           </li>
         </ul>
       </div>
@@ -363,20 +299,57 @@
     </div>
   </section>
 
+  <!-- ===== GAME ===== -->
+  <section class="game-section section" id="game">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Test Your Knowledge</p>
+        <h2 class="section-title">G-Code Challenge</h2>
+        <p class="section-sub">Think you know your G-codes? Five quick questions to find out.</p>
+      </div>
+      <div class="game">
+        <div class="game__start" id="gameStart">
+          <p>Five random G-code questions. 15 seconds each.</p>
+          <button class="btn btn--primary" id="gameBegin">Start Playing</button>
+        </div>
+        <div class="game__card" id="gameCard" style="display:none">
+          <div class="game__progress">
+            <span id="gameProgressText">Question 1 of 5</span>
+            <div class="game__progress-bar">
+              <div class="game__progress-fill" id="gameProgressFill"></div>
+            </div>
+          </div>
+          <div class="game__timer-bar">
+            <div class="game__timer-fill" id="gameTimerFill"></div>
+          </div>
+          <div class="game__question">
+            <p class="game__code" id="gameCode"></p>
+            <p class="game__prompt">What does this code do?</p>
+          </div>
+          <div class="game__choices" id="gameChoices"></div>
+          <div class="game__explain" id="gameExplain" style="display:none">
+            <p id="gameExplainText"></p>
+            <button class="btn btn--sm btn--ghost" id="gameNext">Next &rarr;</button>
+          </div>
+        </div>
+        <div class="game__result" id="gameResult" style="display:none">
+          <div class="game__score-display">
+            <span class="game__score-num accent" id="gameScore">0</span>
+            <span class="game__score-denom">&thinsp;/ 5</span>
+          </div>
+          <p class="game__score-msg" id="gameScoreMsg"></p>
+          <div class="game__breakdown" id="gameBreakdown"></div>
+          <button class="btn btn--primary" id="gameRestart">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer__inner">
       <a href="#hero" class="footer__logo">
-        <svg class="logo-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="28" cy="28" r="23" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.07)"/>
-          <circle cx="28" cy="28" r="17" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.25"/>
-          <line x1="28"   y1="5"    x2="28"   y2="8"    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
-          <line x1="39.5" y1="48"   x2="38"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
-          <line x1="16.5" y1="48"   x2="18"   y2="45.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity="0.6"/>
-          <path d="M 29 16.23 L 38.69 33.02 Q 39.69 34.75 37.69 34.75 L 18.31 34.75 Q 16.31 34.75 17.31 33.02 L 27 16.23 Q 28 14.5 29 16.23 Z" stroke="currentColor" stroke-width="1.5" fill="rgba(56,189,248,0.14)"/>
-          <circle cx="28" cy="28" r="3" stroke="currentColor" stroke-width="1.5" fill="none"/>
-        </svg>
-        Mill-<span class="accent">Turn</span> Pros
+        <img src="images/MTP-Logo.png" alt="Mill-Turn Pros" class="logo-img logo-img--footer" />
       </a>
       <p class="footer__copy">&copy; <span id="year"></span> Mill-Turn Pros. All rights reserved.</p>
       <nav class="footer__nav" aria-label="Footer navigation">
