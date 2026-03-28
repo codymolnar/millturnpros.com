@@ -84,7 +84,7 @@ if (contactForm) {
     fetch(FORM_ENDPOINT, {
       method: 'POST',
       mode:   'no-cors',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify({ name, company, email, service, message }),
     })
       .then(() => {
