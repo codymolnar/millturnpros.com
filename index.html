@@ -5,25 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Mill-Turn Pros — Expert CNC solutions for programming, process optimization, machine setup, and training." />
   <title>Mill-Turn Pros | CNC Solutions</title>
-  <link rel="icon" type="image/png" href="images/MTP-Logo.png" />
+  <link rel="icon" type="image/svg+xml" href="images/logo-mark.svg" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
-      <a href="#hero" class="navbar__logo">
-        <img src="images/MTP-Logo.png" alt="Mill-Turn Pros" class="logo-img" />
+      <a href="#hero" class="navbar__logo" aria-label="Mill-Turn Pros — home">
+        <div class="logo">
+          <!-- Mark: MTP monogram with orbital swoosh
+               Ellipse: cx=45 cy=48 rx=43 ry=22 rotate(-25)
+               Left side of ring → (6, 66)   Right side → (84, 30)
+               sweep=0 arcs OVER the top; sweep=1 arcs UNDER the bottom -->
+          <svg class="logo__mark" viewBox="0 0 90 90" fill="none" aria-hidden="true">
+            <path d="M 6 66 A 43 22 -25 0 1 84 30" stroke="#0a2e9e" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+            <text x="45" y="68" font-family="Teko, 'Arial Narrow', sans-serif" font-size="54" font-weight="700" text-anchor="middle" fill="currentColor" letter-spacing="-2">MTP</text>
+            <path d="M 6 66 A 43 22 -25 0 0 84 30" stroke="#1e78ff" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div class="logo__text">
+            <span class="logo__sub">Mill-Turn</span>
+            <span class="logo__wordmark">Pros</span>
+          </div>
+        </div>
       </a>
       <nav class="navbar__nav" id="navMenu" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn--sm">Get a Quote</a>
+        <a href="#contact" class="btn btn--sm btn--primary">Get a Quote</a>
       </nav>
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -33,14 +47,13 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero">
-    <div class="hero__bg-grid" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <canvas id="heroCanvas" aria-hidden="true"></canvas>
     <div class="container hero__content">
-      <p class="hero__eyebrow">Precision. Efficiency. Expertise.</p>
+      <p class="hero__eyebrow">Precision · Efficiency · Expertise</p>
       <h1 class="hero__headline">
-        CNC Solutions That<br />
-        <span class="accent">Drives Results</span>
+        CNC Solutions<br />
+        <span class="accent">That Drive Results</span>
       </h1>
       <p class="hero__sub">
         From complex mill-turn programming to full process optimization —
@@ -348,8 +361,18 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="#hero" class="footer__logo">
-        <img src="images/MTP-Logo.png" alt="Mill-Turn Pros" class="logo-img logo-img--footer" />
+      <a href="#hero" class="footer__logo" aria-label="Mill-Turn Pros — home">
+        <div class="logo">
+          <svg class="logo__mark" viewBox="0 0 90 90" fill="none" aria-hidden="true">
+            <path d="M 6 66 A 43 22 -25 0 1 84 30" stroke="#0a2e9e" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+            <text x="45" y="68" font-family="Teko, 'Arial Narrow', sans-serif" font-size="54" font-weight="700" text-anchor="middle" fill="currentColor" letter-spacing="-2">MTP</text>
+            <path d="M 6 66 A 43 22 -25 0 0 84 30" stroke="#1e78ff" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <div class="logo__text">
+            <span class="logo__sub">Mill-Turn</span>
+            <span class="logo__wordmark">Pros</span>
+          </div>
+        </div>
       </a>
       <p class="footer__copy">&copy; <span id="year"></span> Mill-Turn Pros. All rights reserved.</p>
       <nav class="footer__nav" aria-label="Footer navigation">

@@ -131,7 +131,7 @@ function shakeForm(form) {
   if (!canvas) return;
   const ctx     = canvas.getContext('2d');
   let particles = [];
-  const COUNT   = 55;
+  const COUNT   = 90;
   const REPEL_R = 120;
   let animId;
   let mouse = { x: -9999, y: -9999 };
@@ -139,8 +139,8 @@ function shakeForm(form) {
   function rand(a, b) { return Math.random() * (b - a) + a; }
 
   function resize() {
-    canvas.width  = canvas.offsetWidth  || canvas.parentElement.offsetWidth;
-    canvas.height = canvas.offsetHeight || canvas.parentElement.offsetHeight;
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
   }
 
   function spawn() {
@@ -175,7 +175,7 @@ function shakeForm(form) {
       if (p.alpha < 0.03) { p.alpha = 0.03; p.da =  Math.abs(p.da); }
       if (p.y < -5) { Object.assign(p, spawn()); p.y = canvas.height + 5; }
       ctx.globalAlpha = p.alpha;
-      ctx.fillStyle   = '#38bdf8';
+      ctx.fillStyle   = '#1e78ff';
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fill();
@@ -184,15 +184,10 @@ function shakeForm(form) {
     animId = requestAnimationFrame(draw);
   }
 
-  const hero = document.getElementById('hero');
-  if (hero) {
-    hero.addEventListener('mousemove', e => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    }, { passive: true });
-    hero.addEventListener('mouseleave', () => { mouse.x = mouse.y = -9999; });
-  }
+  document.addEventListener('mousemove', e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  }, { passive: true });
 
   resize();
   init();
